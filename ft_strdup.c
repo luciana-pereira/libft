@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 02:07:29 by lucperei          #+#    #+#             */
-/*   Updated: 2022/04/26 03:51:42 by lucperei         ###   ########.fr       */
+/*   Created: 2022/04/25 17:17:34 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/26 14:23:51 by lucperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char *ft_strdup(const char *s)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	char	*d;
+	
+	d = malloc((ft_strlen(s) + 1) * sizeof(char));
+	ft_strlcpy(d, s, (ft_strlen(s) + 1));
+	return (d);
+	// free(d);
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
-// int	main()
+// int main()
 // {
-// 	char c;
+// 	char s[] = "Passei no teste.";
 	
-// 	c = ' ';
-// 	printf("Resultado%d", ft_isalpha(c));
-// 	printf("\n");
-	
-// 	c = 'A';
-// 	printf("Resultado%d", isalpha(c));
-// 	printf("\n");
-	
+// 	printf("Result | %s\n", ft_strdup(s));
 // 	return (0);
 // }

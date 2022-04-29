@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 02:07:29 by lucperei          #+#    #+#             */
-/*   Updated: 2022/04/26 03:51:42 by lucperei         ###   ########.fr       */
+/*   Created: 2022/04/25 07:52:39 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/28 05:59:16 by lucperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <limits.h>
 
-int	ft_isalpha(int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	void	*p;
+
+	//	if (!p)
+
+	if (nmemb > 65535 / size)
+	{
+		return (NULL);
+	}
+	p = malloc(nmemb * size);
+	//ft_bzero(p, nmemb * size)
+	ft_memset(p, 0, nmemb * size);
+	return (p);
+	// free(p);
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
-// int	main()
+// int main ()
 // {
-// 	char c;
-	
-// 	c = ' ';
-// 	printf("Resultado%d", ft_isalpha(c));
-// 	printf("\n");
-	
-// 	c = 'A';
-// 	printf("Resultado%d", isalpha(c));
-// 	printf("\n");
-	
+// 	void *p;
+
+// 	p = ft_calloc(2, 5);
+// 	printf("Result | %p\n", p);
 // 	return (0);
 // }

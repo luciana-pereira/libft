@@ -1,0 +1,55 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/06 01:14:21 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/25 21:40:31 by lucperei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+// #include <stddef.h>
+
+char *ft_strrchr(const char *s, int c)
+{
+	int	i;
+	
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+		{
+			return ((char *)s + i);
+		}
+		i--;
+	}
+	return (NULL);
+}
+
+// #include <stdio.h>
+// #include <string.h>
+// #include <stddef.h>
+
+// int	main()
+// {
+// 	const char s[] = "Passei";
+// 	const char c = 's';
+// 	char *ret;
+// 	char *re;
+	
+// 	ret = strrchr(s, c);
+// 	re = ft_strrchr(s, c);
+
+// 	printf("%c | Result | %s\n", c, ret);
+// 	printf("%c | Result | %s\n", c, re);
+
+// 	return (0);
+// }

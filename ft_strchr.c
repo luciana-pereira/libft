@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 02:07:29 by lucperei          #+#    #+#             */
-/*   Updated: 2022/04/26 03:51:42 by lucperei         ###   ########.fr       */
+/*   Created: 2022/04/05 23:53:20 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/20 15:36:20 by lucperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stddef.h>
 
-int	ft_isalpha(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	while (*s != (char)c)
+	{
+		if (*s == '\0')
+		{
+			return (NULL);
+		}
+		s++;
+	}
+	return ((char *)s);
 }
 
 // #include <stdio.h>
-// #include <ctype.h>
+// #include <string.h>
+// #include <stddef.h>
+
 // int	main()
 // {
-// 	char c;
+// 	const char s[] = "Passei";
+// 	const char c = 's';
+// 	char *ret;
+// 	char *re;
 	
-// 	c = ' ';
-// 	printf("Resultado%d", ft_isalpha(c));
-// 	printf("\n");
-	
-// 	c = 'A';
-// 	printf("Resultado%d", isalpha(c));
-// 	printf("\n");
-	
+// 	ret = strchr(s, c);
+// 	re = ft_strchr(s, c);
+
+// 	printf("%c | Result | %s\n", c, ret);
+// 	printf("%c | Result | %s\n", c, re);
+
 // 	return (0);
 // }

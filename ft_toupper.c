@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 02:07:29 by lucperei          #+#    #+#             */
-/*   Updated: 2022/04/26 03:51:42 by lucperei         ###   ########.fr       */
+/*   Created: 2022/04/07 00:31:58 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/25 21:41:22 by lucperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	if (c >= 97 && c <= 122)
+	{
+		return (c -32);
+	}
+	return (c);
 }
 
 // #include <stdio.h>
 // #include <ctype.h>
-// int	main()
+
+// int main()
 // {
-// 	char c;
-	
-// 	c = ' ';
-// 	printf("Resultado%d", ft_isalpha(c));
+// 	int i = 0;
+// 	char str[] = "Passei sou CADETE";
+
+// 	while (str[i])
+// 	{
+// 		putchar (toupper(str[i]));
+// 		//putchar (ft_toupper(str[i]));
+// 		i++;
+// 	}
 // 	printf("\n");
-	
-// 	c = 'A';
-// 	printf("Resultado%d", isalpha(c));
-// 	printf("\n");
-	
 // 	return (0);
 // }

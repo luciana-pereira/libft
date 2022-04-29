@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucperei <lucperei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 02:07:29 by lucperei          #+#    #+#             */
-/*   Updated: 2022/04/26 03:51:42 by lucperei         ###   ########.fr       */
+/*   Created: 2022/04/25 04:08:33 by lucperei          #+#    #+#             */
+/*   Updated: 2022/04/26 00:49:39 by lucperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
 
-int	ft_isalpha(int c)
+void ft_bzero(void *s, size_t n)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	char	*str;
+	size_t	i;
+	
+	i = 0;
+	str = s;
+	while (n > i)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
-// int	main()
+// int main()
 // {
-// 	char c;
+// 	char	s[] = "Passei no teste.";
 	
-// 	c = ' ';
-// 	printf("Resultado%d", ft_isalpha(c));
-// 	printf("\n");
-	
-// 	c = 'A';
-// 	printf("Resultado%d", isalpha(c));
-// 	printf("\n");
-	
+// 	ft_bzero(s + 3, 1);
+// 	printf("Result | %s\n", s);
 // 	return (0);
 // }
