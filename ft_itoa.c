@@ -75,34 +75,4 @@ char	*ft_itoa(int n)
 		n /= 10;
 	}
 	return (p);
-	
-
-	// i = number(n);
-	// if (n < 0)
-	// {
-	// 	n *= -1;
-	// }
-	// p = malloc((i + 1) * sizeof(char));
-	// if (!p)
-	// {
-	// 	return (NULL);
-	// }
-	// p[i] = 0;
-	// if (n == 0)
-	// {
-	// 	p[0] = '0';
-	// }
-	// else
-	// {
-	// 	while (i--, n != 0)
-	// 	{
-	// 		p[i] = (n % 10) + '0';
-	// 		n = (n - (n % 10)) / 10;
-	// 	}
-	// 	if (n < 0)
-	// 	{
-	// 		p[i] = '-';
-	// 	}
-	// }
-	// return (p);
 }
