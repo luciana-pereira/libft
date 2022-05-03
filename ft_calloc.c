@@ -11,20 +11,20 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <limits.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	//	if (!p)
-
-	if (nmemb > 65535 / size)
+	if (nmemb != (nmemb * size) / size)
 	{
 		return (NULL);
 	}
 	p = malloc(nmemb * size);
-	//ft_bzero(p, nmemb * size)
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 	ft_memset(p, 0, nmemb * size);
 	return (p);
 	// free(p);
