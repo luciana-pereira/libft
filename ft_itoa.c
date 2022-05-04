@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static int count(int n)
+static int	count(int n)
 {
 	int	i;
-	
+
 	i = 1;
 	while (n / 10)
 	{
@@ -23,9 +23,9 @@ static int count(int n)
 		i++;
 	}
 	return (i);
-} 
+}
 
-static int negative(int n)
+static int	negative(int n)
 {
 	if (n < 0)
 	{
@@ -42,34 +42,25 @@ static int	number(int c)
 char	*ft_itoa(int n)
 {
 	char	*p;
-	int	i;
-	int	g;
-	
+	int		i;
+	int		ng;
+
 	if (n == -2147483648)
-	{
 		return (ft_strdup("-2147483648"));
-	}
 	if (n == 0)
-	{
 		return (ft_strdup("0"));
-	}
-	g = negative(n);
-	if (g)
-	{
+	ng = negative(n);
+	if (ng)
 		n = -n;
-	}
-	i = count(n) + g;
+	i = count(n) + ng;
 	p = malloc(sizeof(char) * (i + 1));
 	if (!p)
-	{
 		return (NULL);
-	}
 	p[i] = '\0';
-	if (g)
-	{
+	if (ng)
 		p[0] = '-';
-	}
-	while (i-- > g)
+	while (i-- > ng
+	)
 	{
 		p[i] = number(n % 10);
 		n /= 10;
