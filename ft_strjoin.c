@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aloca (com malloc(3)) e retorna uma nova string, que e o resultado da concatenação de s1 e s2.
+Parametros: s1 a sequência de prefixo e s2 a cadeia de sufixo.
+Valor de retorno: Retorna uma nova string ou NULL se a alocação falhar.
+*/
 #include "libft.h"
 // #include <stdlib.h>
 // #include <stdio.h>
