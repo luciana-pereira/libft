@@ -10,9 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função strnstr() localiza a primeira ocorrência da string terminada 
+em null litle na string big, onde não mais do que len caracteres são pesquisados. 
+Os acaracteres que aparecem após um caractere '\0' não são pesquisados.
+
+Valor de Retorno: Se little for uma string vazia, big será retornado, se tittle 
+ocorre em nenhum lugar em big, NULL é retornado, caso contrario, um ponteiro para o 
+primeiro caractere da primeira ocorrência de little é retornado.
+*/
 #include "libft.h"
-// #include <stddef.h>
-// #include <string.h>
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
