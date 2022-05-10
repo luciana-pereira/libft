@@ -10,9 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aloca (com malloc(3)) e retorna uma cópia de s1 com os caracteres especificados
+em set removidos desde o início e o fim da corda.
+
+Parametros: s1 e a string a ser cortada e set o conjunto de referência de caracteres a 
+serem aparados.
+
+Valor de retorno: A string cortada ou NULL se alocação falhar.
+*/
 #include "libft.h"
-// #include <stdlib.h>
-// #include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
