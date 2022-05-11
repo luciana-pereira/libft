@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Adiciona o node(nó) novo no final da lista.
+
+Parametro: lst e o endereço de um ponteiro para o primeiro link de uma lista e 
+new e o endereço de um ponteiro para o node a ser adicionado á lista.
+
+Valor de retorno: Nenhum(none).
+
+Função externa: Nenhum(none).
+*/
+
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
