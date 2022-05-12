@@ -10,8 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Converte a parte inicial da string apontada para int. Ou seja, converte uma string para um inteiro.
+
+Parametro: s e a string a ser convertida em int.
+
+Valor de retorno: Valor convertido.
+*/
+
 #include "libft.h"
-// #include <stdio.h>
 
 int ft_atoi(const char *s)
 {
