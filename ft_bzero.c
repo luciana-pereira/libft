@@ -10,8 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função bzero() apaga os dados nos n bytes da memória começando no local
+apontado por s, escrevendo zeros (bytes contendo '\0') nessa área.
+
+**Se n for 0, bzero() não faz nada.
+
+Valor de retorno: Nenhum (none).
+*/
+
 #include "libft.h"
-// #include <stdio.h>
 
 void ft_bzero(void *s, size_t n)
 {
