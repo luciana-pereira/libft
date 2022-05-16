@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Description: A função verifica se c, que deve ter o valor de unsigned char ou EOF,
+se enquadra em uma determinada classe de caractere de acordo com a localidade especificada.
+Ou seja, verifica se e um caracter alfabetico, na localidade padrão c, equivalente a 
+(issuper(c) || islower(c)).
+
+Valor de retorno: Os valores retornados são diferentes de zero se o caracter c se 
+enquadra na classe testada e zero se não.
+*/
+
 #include "libft.h"
 
 int	ft_isalpha(int c)
