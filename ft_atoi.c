@@ -29,8 +29,8 @@ int ft_atoi(const char *s)
 	a = 0;
 	b = 1;
 	c = 0;
-	while ((s[a] == '\t' || s[a] == '\f' || s[a] == '\n' || 
-	s[a] == '\v' || s[a] == '\r') || s[a] == ' ')
+	while ((s[a] == '\t' || s[a] == '\f' || s[a] == '\n' 
+			|| s[a] == '\v' || s[a] == '\r') || s[a] == ' ')
 	{
 		a++;
 	}
