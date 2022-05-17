@@ -21,13 +21,13 @@ primeiro caractere da primeira ocorrência de little é retornado.
 */
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t s;
+	size_t	i;
+	size_t	s;
 
 	i = 0;
-	if (!*little)
+	if (!(*little))
 	{
 		return ((char *)big);
 	}
@@ -42,7 +42,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 			}
 			if (little[s] == '\0')
 			{
-				return ((char *)&big[i]);
+				return ((char *)big + i);
 			}
 		}
 		i++;

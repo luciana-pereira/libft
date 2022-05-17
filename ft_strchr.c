@@ -11,11 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c)
+	if (c > 127)
+	{
+		c %= 256;
+	}
+	while (*s != c)
 	{
 		if (*s == '\0')
 		{

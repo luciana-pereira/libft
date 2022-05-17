@@ -16,40 +16,33 @@ Parametros: s1 a sequência de prefixo e s2 a cadeia de sufixo.
 Valor de retorno: Retorna uma nova string ou NULL se a alocação falhar.
 */
 #include "libft.h"
-// #include <stdlib.h>
-// #include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	c;
-	char	*s;
+	char	*str;
 
 	if (!s1 || !s2)
-	{
 		return (NULL);
-	}
 	i = 0;
-	c = 0;
-	s = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!s)
-	{
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 		return (NULL);
-	}
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
-		s[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
-	while (s2[c] != '\0')
+	c = 0;
+	while (s2[c])
 	{
-		s[i] = s2[c];
+		str[i] = s2[c];
 		i++;
 		c++;
 	}
-	s[i] = '\0';
-	return (s);
-	// free(s); Colocar para liberar memoria para teste.
+	str[i] = '\0';
+	return (str);
 }
 
 // int main()

@@ -12,46 +12,30 @@
 
 #include "libft.h"
 
-static unsigned int ft_leng(size_t len, size_t start, size_t max)
-{
-	unsigned int i;
-	
-	if (start < len)
-	{
-		i = len - start;
-	}
-	if (start >= len)
-	{
-		i = 0;
-	}
-	if (i > max)
-	{
-		i = max;
-	}
-	return (i);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	unsigned int	i;
-	size_t	c;
+	size_t			i;
+	char			*substr;
+	size_t			c;
 
+	i = 0;
+	c = 0;
 	if (!s)
+		return (NULL);
+	substr = (char *)malloc((len + 1) * sizeof(char));
+	if (!substr)
 	{
 		return (NULL);
 	}
-	c = (unsigned int) ft_strlen(s);
-	i = ft_leng(c, start, len);
-	if (i == 0)
+	while (s[i])
 	{
-		return (ft_strdup(""));
+		if (i >= start && c < len)
+		{
+			substr[c] = s[i];
+			c++;
+		}
+		i++;
 	}
-	str = ft_calloc(i + 1, sizeof(char));
-	if (!str)
-	{
-		return (NULL);
-	}
-	ft_strlcpy(str, &s[start], i + 1);
-	return (str);
+	substr[c] = '\0';
+	return (substr);
 }
