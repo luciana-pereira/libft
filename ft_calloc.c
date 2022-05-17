@@ -19,6 +19,7 @@ exclusivo que podera ser passado posteriormente com sucesso para free().
 Valor de retorno: A função calloc() retorna um ponteiro para a memoria alocada,
 que é adequadamente alinhada para qualquer tipo interno. Em caso de erro, essas 
 funções retornaram NULL.
+
 */
 
 #include "libft.h"
