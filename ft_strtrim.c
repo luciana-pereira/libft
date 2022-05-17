@@ -23,24 +23,24 @@ Valor de retorno: A string cortada ou NULL se alocação falhar.
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	s;
-	size_t	e;
-	
+	size_t	i;
+	char	*str;
+
 	if (!s1 || !set)
 	{
 		return (NULL);
 	}
-	s = 0;
-	while (s1[s] && ft_strchr(set, s1[s]))
+	while (*s1 && ft_strchr(set, *s1))
 	{
-		s++;
+		s1++;
 	}
-	e = ft_strlen(s1) + 1;
-	while (e > s && ft_strchr(set, s1[e - 1]))
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
 	{
-		e--;
+		i--;
 	}
-	return (ft_substr(s1, s, (e - s)));
+	str = ft_substr((char *)s1, 0, (i + 1));
+	return (str);
 }
 
 // int main()

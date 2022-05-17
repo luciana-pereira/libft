@@ -24,8 +24,16 @@ na classe testada e zero se não.
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	if ((ft_isalpha(c) || ft_isdigit(c)) == 1)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
+
 
 // #include <stdio.h>
 // #include <ctype.h>
