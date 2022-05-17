@@ -19,26 +19,31 @@ exclusivo que podera ser passado posteriormente com sucesso para free().
 Valor de retorno: A função calloc() retorna um ponteiro para a memoria alocada,
 que é adequadamente alinhada para qualquer tipo interno. Em caso de erro, essas 
 funções retornaram NULL.
+
 */
 
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*p;
+	void	*ptr;
 
-	if (nmemb != (nmemb * size) / size)
+	if (nmemb * size > 2147483647)
 	{
 		return (NULL);
 	}
-	p = malloc(nmemb * size);
-	if (p == NULL)
+	else if (nmemb > 2147483647 || size > 2147483647)
 	{
 		return (NULL);
 	}
-	ft_memset(p, 0, nmemb * size);
-	return (p);
-	// free(p);
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+	{
+		return (NULL);
+	}
+	ft_memset(ptr, 0, (nmemb * size));
+	return (ptr);
+	// free(ptr);
 }
 
 // int main ()
