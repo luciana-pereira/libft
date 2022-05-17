@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Essas funções verificam se c, que deve ter o valor de um unsigned char
+ou EOF, se enquada em uma determinada classe de caractere de acordo com a localidade
+especificada. Ou sdeja se é um caracter alfanumerico, é equivalente a (isalpha(c) || 
+isdigit(c)).
+
+Valor de retorno: Os valores retornados são diferentes de zero se o caractere c se enquada
+na classe testada e zero se não.
+*/
+
 #include "libft.h"
 
 int	ft_isalnum(int c)
