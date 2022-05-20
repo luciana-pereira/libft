@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Essas funções verificam se c, que deve ter o valor de um unsigned char
+ou EOF se enquadra em uma classe determinada de caractere de acordo com a localidade 
+especificada.
+
+Valor de retorno: Os valores de retornados são diferentes de zero se o caractere c
+se enquadra na classe testada e zero se não.
+*/
+
 #include "libft.h"
 
 int	ft_isdigit(int c)
