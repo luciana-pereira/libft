@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Essa função verifica se c, que deve ter o valor de um unsigned char 
+ou EOF, se enquadra em determinada classe de caractere de acordo com a localidade
+especificada.
+
+Valor de retorno: Se c é um caractere de impressão, a função retorna um valor 
+diferente de zero, caso contrario, ele retorna 0.
+*/
+
 #include "libft.h"
 
 int	ft_isprint(int c)
