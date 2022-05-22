@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aloca (com malloc(3)) e retorna uma string representando o inteiro recebido
+como argumento. Numeros negativos devem ser tratados.
+
+Parametros: "n" o inteiro a ser convertido.
+
+Valor de retorno: A string que representa o inteiro ou NULL se a alocação falhar.
+*/
+
 #include "libft.h"
 
 static size_t	count(int n)
