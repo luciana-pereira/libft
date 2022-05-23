@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Adiciona o nó 'novo' no inicio da lista.
+
+Valor de retorno: Nenhum.
+
+Parametro: lst e o endereço de um ponteiro para o primeiro link de uma lista e
+new e o endereço de um ponteiro para o nó a ser adicionado á lista.
+*/
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
