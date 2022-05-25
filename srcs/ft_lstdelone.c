@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Toma como parâmetro um nó e libera a memória do conteúdo do nó usando a 
+função 'del' dada como parâmetro e libera o nó. A memória do 'next' não deve ser liberada.
+
+Parametros: lst e o nó para libertar e del o endereço da função usada para excluir o conteúdo.
+
+Valor de retorno: Nenhum.
+
+Função externa: Free.
+*/
+
 #include "libft.h"
 
 void ft_lstdelone(t_list *lst, void (*del)(void *))
