@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição:Retorna o último nó da lista.
+
+Parametros:lst e o inicio da lista.
+
+Valor de retorno:Ultimo nó da lista.
+*/
+
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
