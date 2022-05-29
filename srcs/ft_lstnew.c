@@ -10,6 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aloca com malloc e retorna um novo nó. A variavel membro 'content' é 
+inicializada com o valor do parâmetro 'content'. A variável 'next' é inicializada 
+como NULL.
+
+Parametros: content e o conteudo com o qual criar o nó.
+
+Valo do retorno:O novo nó.
+
+Função externa:malloc.
+*/
+
 #include "libft.h"
 
 t_list *ft_lstnew(void *content)
