@@ -10,6 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função memcmp() compara os primeiros n bytes (cada um interpretado 
+como unsigned char) das areas de memorias s1 e s2.
+
+Parâmetros: s1 aponta para um ponteiro de bloco de memoria, s2 aponta para um 
+ponteiro de bloco de memoria e n e o numero de bytes a serem analisado.
+
+Valor de retorno: A função retorna um numero inteiro menor, igual ou maior que 
+zero se os primeiros n  bytes de s1 forem encontrados, respectivamente, menores que,
+correspondentes ou maiores que os primeiros n bytes de s2.
+*/
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
