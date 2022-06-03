@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função memcpy copia n bytes da área de memoria src para a área de 
+memória dest. As areas de memoria não devem se sobrepor.
+
+Parametro: *dest e o ponto para a matriz destino para armazenar o conteudo copiado,
+conversão de tipo para void ponteiros*, *src aponta para copiar a fonte de dados, 
+conversão de tipo para void ponteiros* e n o numero de bytes a serem copiados.
+
+Valor de retorno: Retorna um ponteiro para dest.
+*/
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
