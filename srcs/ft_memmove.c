@@ -10,6 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função memmove() cópia n bytes da área de memória src para area de 
+memória dest. As areas de memória podem se sobrepor: a cópia ocorre como se os 
+bytes em src fossem copiados primeiro em um array temporário que não se sobreponha 
+a src ou dest, e os bytes são então copiados do array temporário para dest.
+
+Valor de retorno: Retorna um ponteiro para dest, ou seja, esta função retorna um 
+ponteiro para o ponteiro dest armazenamento de destino.
+
+Parâmetros: *dest e o ponto para a matriz destino para armazenar o conteúdo copiado, 
+conversão de tipo para void ponteiros*, *src apontado para copiar a fonte de dados, 
+conversão de tipo para void ponteiros* e n o numero de bytes a serem copiados.
+*/
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
