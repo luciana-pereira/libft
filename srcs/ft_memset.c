@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função memset preenche os primeiros n bytes da área de mémoria apontada
+por s com o byte constante c.
+
+Valor de retorno: Retorna um ponteiro para a área de memória s.
+
+Parâmetros: str e um ponto para preencher o bloco de memória, c o valor a ser definido.
+Esse valor e passado como un int, mas a função quando o bloco de memória é preenchido 
+usando os valores de unsigned char e n o numero de bytes a ser definido para esse valor.
+*/
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
