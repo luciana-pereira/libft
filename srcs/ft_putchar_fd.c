@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Emite o caractere c para o arquivo fornecido descritor.
+
+Valor de Retorno: Nenhum.
+
+Parametros: c o caracter a ser gerado e fd o descritor de arquivo no qual escrever.
+
+Função externa: write.
+*/
+
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
