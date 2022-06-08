@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Gera a string 'n' para o arquivo fornecido descritor.
+
+Parametros: n e o inteiro a ser gerado e fd o descritor dearquivo no qual escrever.
+
+Função externa: write
+*/
+
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
