@@ -10,12 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aloca com malloc e retorna um array de string obtidas pela divisão de
+s usando o caracter c como delimitador. A matriz deve terminar com um ponteiro NULL.
+
+Parametros: 's' e a string a ser dividida e 'c' o caracter delimitador.
+
+Valor de retorno: A matriz de novas strings resultantes da divisão ou NULL se a alocação falhar.
+*/
+
 #include "libft.h"
 
-static size_t	ft_count_word(const char *s, char c)
+static size_t ft_count_word(const char *s, char c)
 {
-	size_t	i;
-	size_t	count;
+	size_t i;
+	size_t count;
 
 	i = 0;
 	count = 0;
@@ -38,9 +47,9 @@ static size_t	ft_count_word(const char *s, char c)
 	return (count);
 }
 
-static size_t	ft_len(const char *s, char c)
+static size_t ft_len(const char *s, char c)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -50,12 +59,12 @@ static size_t	ft_len(const char *s, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	char	**str;
-	size_t	i;
-	size_t	end;
-	size_t	size;
+	char **str;
+	size_t i;
+	size_t end;
+	size_t size;
 
 	if (!s)
 		return (NULL);
