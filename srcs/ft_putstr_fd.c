@@ -14,8 +14,6 @@
 Descrição: Gera a string s para o descritor de arquivo fornecido.
 
 Parametros: s e a stirng para a saida e fd o descritor no qual escrever.
-
-Função externa: write.
 */
 
 #include "libft.h"
