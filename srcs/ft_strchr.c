@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função strchr retorna um ponteiro para a primeira ocorrência do
+caractere c na string s ou NULL caso não encontre.
+
+Valor de retorno: Retorna um ponteiro para o caractere correspondente ou NULL
+se o caractere não for encontrado.
+
+Parâmetro: s ea string para ser recuperada c e o c o caractere a ser procurado em s.
+*/
+
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
 	if (c > 127)
 	{
@@ -39,7 +49,7 @@ char	*ft_strchr(const char *s, int c)
 // 	const char c = 's';
 // 	char *ret;
 // 	char *re;
-	
+
 // 	ret = strchr(s, c);
 // 	re = ft_strchr(s, c);
 
