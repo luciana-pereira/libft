@@ -10,11 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função strdup retorna um ponteiro para uma nova string que é uma
+duplicata da string s. A memória para a nova string é obtida com malloc, e pode
+ser liberada com free.
+
+Valor de retorno: Em caso de sucesso, a função strdup retorna um ponteiro para a
+string duplicada. Ele retorna NULL se memória insuficiente estiver disponivel, com
+errno definido para indicar a causa do erro.
+*/
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char *ft_strdup(const char *s)
 {
-	char	*str;
+	char *str;
 
 	str = (char *)malloc(ft_strlen(s) + 1);
 	if (!str)
@@ -28,7 +38,7 @@ char	*ft_strdup(const char *s)
 // int main()
 // {
 // 	char s[] = "Passei no teste.";
-	
+
 // 	printf("Result | %s\n", ft_strdup(s));
 // 	return (0);
 // }
