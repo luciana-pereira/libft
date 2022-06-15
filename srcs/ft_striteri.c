@@ -10,18 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aplica a função f a cada caractere da string passada como argumento,
+passando seu indice como primeiro argumento. Cada caractere e passado por endereço
+para f para ser modificado se necessário.
+
+Parametros: s e a string a qual interar e f a função a se aplicada a cada caractere.
+*/
+
 #include "libft.h"
 // #include <stdio.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
-	
+	size_t i;
+
 	if (!s || !f)
 	{
-		return ;
+		return;
 	}
-	i  = 0;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);
