@@ -10,21 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função anexa a string src terminada em NUL ao final de dst. Ele anexara
+no maximo size -strlen(dst) - 1 bytes, terminando com NUL o resultado.
+
+Valor de retorno: Retornara o comprimento inicial de dst mais o comprimento de src.
+*/
+
 #include "libft.h"
 // #include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i;
 	size_t l;
-	
+
 	l = ft_strlen(dst);
 	if (size <= l)
 	{
 		return (size + ft_strlen(src));
 	}
 	i = 0;
-	while (src[i] && (i + l ) < (size -1))
+	while (src[i] && (i + l) < (size - 1))
 	{
 		dst[i + l] = src[i];
 		i++;
