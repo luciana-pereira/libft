@@ -10,12 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição:A função cópia e concatena strings respectivamente, ela retorna o
+comprimento total da string. O conteudo da string src e copiada para buffer dst.
+
+Valor de retorno: Retorna o comprimento de src.
+*/
+
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	c;
+	size_t i;
+	size_t c;
 
 	i = 0;
 	c = ft_strlen(src);
@@ -23,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		return (c);
 	}
-	while (src[i] && i < (size -1))
+	while (src[i] && i < (size - 1))
 	{
 		dst[i] = src[i];
 		i++;
