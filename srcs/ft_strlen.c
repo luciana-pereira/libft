@@ -10,11 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função calcula o comprimento de uma determinada string. Ela recebe
+uma string como argumento e retorna seu comprimento. O valor retornado e do tipo
+size_t.
+
+Valor de retorno: A função strlen retorna o numero de bytes na string apontada por s.
+*/
+
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	while (s[i] != '\0')
