@@ -10,12 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Aplica a função f a cada caractere da string s, e passando seu indice
+como primeiro argumento para criar uma nova string com malloc resultando de sucessivas
+aplicações de f como delimitador. A matriz deve terminar com um ponteiro NULL.
+
+Parametros: s ea string a qual inteirar e f a função a se aplicada a cada caractere.
+
+Valor de retorno: A string criada apartir dos sucessivos aplicativos fora e NULL
+se a alocação falhar.
+*/
+
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	size_t	i;
+	char *str;
+	size_t i;
 
 	if (!s || !f)
 	{
