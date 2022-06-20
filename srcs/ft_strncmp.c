@@ -10,11 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função compara duas  strings s1 e s2. A localidade não e levada em
+consideração.
+
+Valor de retorno: Retorna um numero inteiro menor, igual ou maior que zero  se s1
+for encontrado, respectivamente, menor que, igualar ou maior que s2.
+
+Parametros: s1 e o primeiro texto a ser comparado, s2 compara a segunda string
+e n e o numero maximo de caracteres para comparar.
+*/
+
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	if (n == 0)
