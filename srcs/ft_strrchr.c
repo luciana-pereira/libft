@@ -10,11 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: A função strrchr retorna um ponteiro para a última ocorrência do caractere
+c na string s ou NULL caso não encontre.
+
+Valor de retorno: A função strrchr retorna um ponteiro para o caractere correspondente
+ou NULL se o caractere não for encontrado.
+
+Parâmetros: s e a string para ser recuperada c e o c e o caractere a ser procurado em s.
+*/
+
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int i;
 
 	if (c > 127)
 	{
@@ -42,7 +52,7 @@ char	*ft_strrchr(const char *s, int c)
 // 	const char c = 's';
 // 	char *ret;
 // 	char *re;
-	
+
 // 	ret = strrchr(s, c);
 // 	re = ft_strrchr(s, c);
 
