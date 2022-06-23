@@ -10,9 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição: Essas funções convertem letras minusculas em maiusculas.
+
+Valor de retorno: O valor retornado é o da letra covertida, ou c se a conversão
+não foi possível.
+*/
+
 #include "libft.h"
 
-int	ft_tolower(int c)
+int ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
