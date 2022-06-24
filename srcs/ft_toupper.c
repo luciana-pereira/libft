@@ -10,13 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrição Essa função converte letras minusculas e vice-versa.
+
+Valor de retorno: O valor de retorno é o da letra covertida, ou c se a conversão
+não foi possivel.
+*/
+
 #include "libft.h"
 
-int	ft_toupper(int c)
+int ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 	{
-		return (c -32);
+		return (c - 32);
 	}
 	return (c);
 }
